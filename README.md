@@ -12,9 +12,9 @@ Shows all files starting at the root directory of the application, and supports 
 Test the application:
 
 ```bash
-git clone (repo)
-cd (repo name)
-go run ./cmd/app/main.go
+git clone https://github.com/CollCaz/FileShare.git
+cd FileShare
+go run cmd/app/main.go
 
 ```
 Build the application:
