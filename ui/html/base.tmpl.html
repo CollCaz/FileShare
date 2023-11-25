@@ -1,0 +1,25 @@
+{{define "base"}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>File Share</title>
+    <!-- link to the CSS and favicons -->
+    <link rel="stylesheet" href="/static/tailwind.css" />
+    <script src="/static/htmx.min.js"></script>
+  </head>
+
+  <body>
+    <header>{{ template "nav" .Crumbs }}</header>
+    <main>
+      <div
+        class="px-7 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5"
+      >
+        {{ range .Dirs }} {{ template "dir" .}} {{ end }} {{ range .Files }} {{
+        template "files" . }} {{ end }}
+      </div>
+    </main>
+    {{ template "footer" .}}
+  </body>
+</html>
+{{end}}

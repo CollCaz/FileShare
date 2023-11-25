@@ -1,0 +1,5 @@
+2023/11/24 01:12:36 INFO <app/main.go:16> Starting server at: http://192.168.0.107:8080
+
+INFO <server/handlers.go:105> [cmd]
+INFO <server/handlers.go:105> [cmd/app]
+signal: interrupt

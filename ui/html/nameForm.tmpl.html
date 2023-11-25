@@ -1,0 +1,30 @@
+{{define "nameForm" }}
+<form
+  hx-patch="/update/{{.Path}}-update"
+  hx-target="this"
+  hx-swap="outerHTML"
+  class="name-replace text-lg font-bold flex-wrap text-blue-600"
+>
+  <div class="break-all">
+    <input type="text" name="path" class="hidden" value="{{.Name}}" />
+    <input
+      type="text"
+      name="new-name"
+      value="{{ .Name }}"
+      type="textarea"
+      class="break-all bg-gray-50 box-border w-full break-words"
+    />
+  </div>
+  <button
+    class="btn bg-green-700 hover:bg-green-800 text-white text-sm font-bold py-1 px-2 rounded"
+  >
+    Accept
+  </button>
+  <button
+    hx-get="/refresh"
+    class="btn bg-red-700 hover:bg-red-800 text-white text-sm font-bold py-1 px-2 rounded"
+  >
+    Cancel
+  </button>
+</form>
+{{end}}

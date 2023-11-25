@@ -1,0 +1,47 @@
+{{define "files"}}
+<div class="m-2 flex flex-col justify-start bg-blue-100 shadow-md rounded-xl">
+  <div class="flex justify-between items-start rounded-t-xl py-5 p-4">
+    <a
+      id="{{index . 2}}"
+      href="{{index . 0}}"
+      hx-target="this"
+      hx-swap="outerHTML"
+    >
+      <h3
+        class="name-replace break-all text-lg font-bold flex-wrap text-blue-600"
+      >
+        {{index . 1}}
+      </h3>
+    </a>
+
+    <div class="flex gap-x-1 justify-start">
+      <div class="hs-tooltip">
+        <div>
+          <select
+            name="make"
+            class="appearance-none ml-3 bg-blue-100"
+            onchange="this.selectedIndex=0"
+          >
+            <option disabled selected class="hidden">⚙️</option>
+            <option
+              value="Delete"
+              hx-delete="/delete/{{index . 0}}-delete"
+              hx-confirm="Are you sure you want to delete this file?"
+            >
+              🗑️
+            </option>
+            <option
+              value="Rename"
+              hx-get="/update{{index . 0}}-update?id={{index . 2}}"
+              hx-target="#{{index . 2}}"
+              hx-swap="outerHTML"
+            >
+              ✏️
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}

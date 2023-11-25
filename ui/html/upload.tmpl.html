@@ -1,0 +1,24 @@
+{{define "upload"}}
+<form
+  class="flex-col justify-end"
+  hx-encoding="multipart/form-data"
+  hx-swap="none"
+  hx-on::after-request="this.reset()"
+  hx-post=""
+>
+  <div class="flex items-center">
+    <label for="file" class="sr-only">Choose file</label>
+    <input
+      type="file"
+      name="file"
+      id="file"
+      class="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-green-500 focus:ring-green-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 file:bg-gray-50 file:border-0 file:me-4 file:py-3 file:px-4 dark:file:bg-gray-700 dark:file:text-gray-400"
+    />
+    <button
+      class="mx-5 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
+    >
+      Upload
+    </button>
+  </div>
+</form>
+{{end}}

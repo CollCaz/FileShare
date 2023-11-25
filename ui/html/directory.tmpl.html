@@ -1,0 +1,13 @@
+{{define "dir"}}
+<div
+  class="m-2 px-7 rounded-xl gap-4 bg-blue-600 py-6 px-7.5 shadow-2xl break-all"
+>
+  <a href="{{ index . 0 }}">
+    <div class="inset-5">
+      <h4 class="text-title-md inset-5 font-bold text-blue-100">
+        {{index . 1}}/
+      </h4>
+    </div>
+  </a>
+</div>
+{{end}}
