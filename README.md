@@ -1,12 +1,16 @@
 # FileServer
 
 A simple file hosting server to make storing and sharing files easier.
-Shows all files starting at the root directory of the application, and supports the following features:
+Shows all files starting at the root directory of the application, and supports the following actions:
 1. Navigating Directories
 2. Uploading files
 3. Downloading files
 4. Renaming  files
 5. Deleting files
+
+Built with Echo, TailwindCSS and HTMX.
+
+![Preview Image](https://github.com/CollCaz/FileShare/blob/main/previewImage.png)
 
 ## Getting Started
 Test the application:
@@ -14,6 +18,7 @@ Test the application:
 ```bash
 git clone https://github.com/CollCaz/FileShare.git
 cd FileShare
+go mod tidy
 go run cmd/app/main.go
 
 ```
@@ -30,11 +35,6 @@ make buildWindows
 ```
 
 ## MakeFile
-
-run all make commands with clean tests
-```bash
-make all build
-```
 
 build the application for linux
 ```bash
