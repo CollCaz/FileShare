@@ -3,9 +3,9 @@
 A simple file hosting server to make storing and sharing files easier.
 Shows all files starting at the root directory of the application, and supports the following actions:
 1. Navigating Directories
-2. Uploading files
+2. Uploading files, Automatically detects duplicate names and deals with them properly.
 3. Downloading files
-4. Renaming  files
+4. Renaming  files, Automatically detects duplicate names and deals with them properly.
 5. Deleting files
 
 Built with Echo, TailwindCSS and HTMX.
@@ -14,6 +14,8 @@ Built with Echo, TailwindCSS and HTMX.
 
 ## Getting Started
 Test the application:
+Download one of the releases (Linux, Windows)
+Or build yourself.
 
 ```bash
 git clone https://github.com/CollCaz/FileShare.git
